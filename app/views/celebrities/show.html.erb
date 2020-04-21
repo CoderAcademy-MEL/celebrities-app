@@ -2,3 +2,9 @@
 
 <p>Name: <%= @celebrity.name  %> | Notability: <%= @celebrity.notability %></p>
 <img src="<%= @celebrity.profile_picture  %>" alt="A picture of <%= @celebrity.name %>">
+
+<%= link_to "Update Celebrity", celebrities_edit_path(@celebrity.id) %>
+
+<%= link_to "Delete Celebrity", celebrity_path(@celebrity.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Back", :back %>

@@ -1,18 +1,20 @@
-<h1>New page</h1>
+<h1>Edit page</h1>
 
-
-<!-- <form action="<%= celebrities_path %>" method="POST" >
+<!-- <form action="<%= celebrity_path(@celebrity.id) %>" method="POST" >
   <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+  <input type="hidden" name="_method" value="put" />
+  
   <label>Name</label>
-  <input type="text" name="celebrity[name]" />
+  <input type="text" name="celebrity[name]" value="<%= @celebrity.name %>" />
 
   <label>Notability</label>
-  <input type="text" name="celebrity[notability]" />
+  <input type="text" name="celebrity[notability]" value="<%= @celebrity.notability %>" />
 
   <label>Image Url</label>
-  <input type="text" name="celebrity[profile_picture]" />
+  <input type="text" name="celebrity[profile_picture]" value="<%= @celebrity.profile_picture %>" />
 
-  <input type="submit" value="Create" />
+  <input type="submit" value="Update" />
 </form> -->
 
 <%= form_with model: @celebrity, local: true do |form| %>

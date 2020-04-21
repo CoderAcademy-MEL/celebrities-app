@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post "/celebrities", to: "celebrities#create", as: "celebrities"
   get "/celebrities/new", to:"celebrities#new", as: "celebrities_new" 
+  # localhost:3000/celebrities/3/edit
   get "/celebrities/:id/edit", to: "celebrities#edit", as: "celebrities_edit"
   # localhost:3000/celebrities/3
   get "/celebrities/:id", to: "celebrities#show", as: "celebrity"

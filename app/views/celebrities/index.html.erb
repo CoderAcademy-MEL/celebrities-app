@@ -2,7 +2,12 @@
 
 <ol>
   <% @celebrities.each do |celebrity| %>
-    <li>Name: <%= celebrity.name  %> | Notability: <%= celebrity.notability %></li>
+    <%= link_to celebrity_path(celebrity.id) do %>
+      <li>
+        <p>Name: <%= celebrity.name  %></p> 
+        <p>Notability: <%= celebrity.notability %></p>
+      </li>
+    <% end %>
     <img src="<%= celebrity.profile_picture  %>" alt="A picture of <%= celebrity.name %>">
   <% end %>
 </ol>
