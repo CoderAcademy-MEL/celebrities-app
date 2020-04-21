@@ -1,13 +1,19 @@
-<h1>Index page</h1>
+<div class="container">
+  <h1>Index page</h1>
 
-<ol>
-  <% @celebrities.each do |celebrity| %>
-    <%= link_to celebrity_path(celebrity.id) do %>
-      <li>
-        <p>Name: <%= celebrity.name  %></p> 
-        <p>Notability: <%= celebrity.notability %></p>
-      </li>
-    <% end %>
-    <img src="<%= celebrity.profile_picture  %>" alt="A picture of <%= celebrity.name %>">
-  <% end %>
-</ol>
+  <ol>
+    <div class="row">    
+      <% @celebrities.each do |celebrity| %>
+        <div class="col-12 col-md-4 box">
+          <%= link_to celebrity_path(celebrity.id) do %>
+            <li>
+              <p>Name: <%= celebrity.name  %></p> 
+              <p>Notability: <%= celebrity.notability %></p>
+            </li>
+          <% end %>
+          <img src="<%= celebrity.profile_picture  %>" alt="A picture of <%= celebrity.name %>">
+        </div>
+      <% end %>
+    </div>
+  </ol>
+</div>
