@@ -1,0 +1,8 @@
+<h1>Index page</h1>
+
+<ol>
+  <% @celebrities.each do |celebrity| %>
+    <li>Name: <%= celebrity.name  %> | Notability: <%= celebrity.notability %></li>
+    <img src="<%= celebrity.profile_picture  %>" alt="A picture of <%= celebrity.name %>">
+  <% end %>
+</ol>
